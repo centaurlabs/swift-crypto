@@ -50,7 +50,7 @@ let package = Package(
         .target(name: "CCryptoBoringSSLShims", dependencies: ["CCryptoBoringSSL"]),
         .target(name: "SwiftCrypto", dependencies: ["CCryptoBoringSSL", "CCryptoBoringSSLShims"], swiftSettings: swiftSettings),
         .target(name: "crypto-shasum", dependencies: ["SwiftCrypto"]),
-        .testTarget(name: "CryptoTests", dependencies: ["SwiftCrypto"], swiftSettings: swiftSettings),
+        .testTarget(name: "SwiftCryptoTests", dependencies: ["SwiftCrypto"], swiftSettings: swiftSettings),
     ],
     cxxLanguageStandard: .cxx11
 )
